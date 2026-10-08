@@ -1,0 +1,17 @@
+@startuml
+
+hide members
+
+class RoomManagement <<Singleton>> implements Observer
+abstract class Observable
+class Room extends Observable
+interface Observer
+Room --> "1" RoomState
+abstract class RoomState
+RoomManagement ..> RoomState
+class Livre extends RoomState
+class Ocupado extends RoomState
+class Manutencao extends RoomState
+class Interditado extends RoomState
+
+@enduml

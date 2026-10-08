@@ -1,0 +1,11 @@
+@startuml
+
+[*] --> Livre
+Livre --> Ocupado
+Livre --> Manutencao
+Ocupado --> Livre
+Manutencao --> Livre
+Manutencao --> Interditado
+Interditado --> [*]
+
+@enduml
